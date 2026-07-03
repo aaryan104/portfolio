@@ -1,0 +1,62 @@
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from config import settings
+from database import init_db
+from cache import redis_cache
+from limiter import limiter
+from slowapi.errors import RateLimitExceeded
+from slowapi import _rate_limit_exceeded_handler
+from routers import contact, resume, stats
+import uvicorn
+import logging
+
+# Configure logger
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("portfolio_main")
+
+app = FastAPI(
+    title="Aaryan Mangukiya Portfolio API",
+    description="FastAPI Backend for Contact submissions, resume downloads and coding statistics cache proxies.",
+    version="1.0.0"
+)
+
+# Configure CORS Middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=settings.cors_origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# Wire SlowAPI Rate Limiter
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+
+# Register Lifespan Startup Hooks
+@app.on_event("startup")
+async def startup_event():
+    # 1. Connect MongoDB via Beanie ODM
+    try:
+        await init_db()
+        logger.info("MongoDB database connection initialized successfully")
+    except Exception as e:
+        logger.critical(f"MongoDB startup connection failed: {e}")
+
+    # 2. Connect Redis cache
+    try:
+        await redis_cache.connect()
+    except Exception as e:
+        logger.warning(f"Redis cache connection failed on startup: {e}")
+
+# Mount API Routers
+app.include_router(contact.router)
+app.include_router(resume.router)
+app.include_router(stats.router)
+
+@app.get("/health")
+async def health_check():
+    return {"status": "healthy"}
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
