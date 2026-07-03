@@ -1,0 +1,31 @@
+# Node dependencies
+node_modules/
+**/node_modules/
+
+# Python Virtual Environments
+venv/
+**/venv/
+.venv/
+env/
+
+# Python compilation files
+__pycache__/
+**/__pycache__/
+*.pyc
+
+# Production build outputs
+dist/
+**/dist/
+build/
+
+# IDE files
+.vscode/
+.idea/
+.gemini/
+.agents/
+
+# Local environment secret variables
+.env
+**/.env
+.env.local
+.env.*.local
