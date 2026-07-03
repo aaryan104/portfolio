@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background-base text-gray-300 font-body antialiased selection:bg-accent-blue/30 selection:text-white overflow-x-hidden;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(139, 92, 246, 0.03) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(59, 130, 246, 0.03) 0px, transparent 50%),
+      radial-gradient(at 50% 50%, rgba(34, 211, 238, 0.01) 0px, transparent 50%);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display text-white tracking-tight;
+  }
+
+  /* Custom focus outline ring */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-accent-blue-light/50 ring-offset-2 ring-offset-background-base;
+  }
+}
+
+@layer utilities {
+  /* Ambient card glow helper */
+  .glow-card-blue:hover {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.15);
+  }
+  
+  .glow-card-purple:hover {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.15);
+  }
+  
+  .glow-card-cyan:hover {
+    box-shadow: 0 0 30px rgba(34, 211, 238, 0.15);
+  }
+  
+  /* Scrollbar customization */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-background-base;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-white/10 rounded-full border-2 border-background-base hover:bg-white/20 transition-colors;
+  }
+}
