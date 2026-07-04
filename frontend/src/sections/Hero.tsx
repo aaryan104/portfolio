@@ -4,9 +4,9 @@ import { useStore } from '../store/useStore';
 import { Github, Linkedin, Mail, ArrowDown } from 'lucide-react';
 import { MagneticButton } from '../components/MagneticButton';
 import { GradientText } from '../components/GradientText';
-import { SiLeetcode } from 'react-icons/si';
+import { RESUME_DATA } from '../content/resume-data';
 
-const TITLES = ['AI Developer', 'Software Engineer', 'Full-Stack Developer', 'Problem Solver'];
+const TITLES = ['Software Developer', 'Dotnet Developer', 'Backend Developer', 'Frontend Developer'];
 
 export const Hero: React.FC = () => {
   const { setCursorHovered } = useStore();
@@ -50,12 +50,19 @@ export const Hero: React.FC = () => {
     }
   };
 
+  const handleResumeClick = () => {
+    const resumeSection = document.getElementById('resume');
+    if (resumeSection) {
+      resumeSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden bg-background-base">
       {/* 3D Floating Background blobs */}
       <motion.div
         style={{ y: yBlob1 }}
-        className="absolute top-1/4 left-10 w-72 h-72 rounded-full bg-accent-blue/10 blur-3xl pointer-events-none animate-pulse-slow"
+        className="absolute top-1/4 left-10 w-72 h-72 rounded-full bg-accent-blue/10 blur-3xl pointer-events-none"
       />
       <motion.div
         style={{ y: yBlob2 }}
@@ -63,7 +70,7 @@ export const Hero: React.FC = () => {
       />
       <motion.div
         style={{ y: yBlob3 }}
-        className="absolute top-1/3 right-1/4 w-60 h-60 rounded-full bg-accent-cyan/5 blur-3xl pointer-events-none animate-float"
+        className="absolute top-1/3 right-1/4 w-60 h-60 rounded-full bg-accent-cyan/5 blur-3xl pointer-events-none"
       />
 
       {/* Grid Content */}
@@ -76,12 +83,14 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.5 }}
             className="space-y-2"
           >
-            <span className="text-accent-blue font-mono tracking-wider font-semibold uppercase text-sm block">
-              Welcome to my space
+            <span className="text-accent-cyan font-mono tracking-wider font-semibold uppercase text-xs block">
+              AVAILABLE FOR INTERNSHIPS
             </span>
             <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight">
               Hi, I'm <br />
-              <GradientText>Aaryan Mangukiya</GradientText>
+              <GradientText from="from-accent-blue" to="to-accent-purple">
+                {RESUME_DATA.personalInfo.name}
+              </GradientText>
             </h1>
           </motion.div>
 
@@ -92,8 +101,8 @@ export const Hero: React.FC = () => {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="h-8 md:h-10 text-xl md:text-3xl font-medium text-gray-300"
           >
-            <span>I build solutions as an </span>
-            <span className="text-white border-r-2 border-accent-blue pr-1 animate-pulse">
+            <span>A </span>
+            <span className="text-white border-r-2 border-accent-cyan pr-1 animate-pulse">
               {typedText}
             </span>
           </motion.div>
@@ -102,10 +111,9 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.5 }}
-            className="text-gray-400 max-w-xl text-base md:text-lg leading-relaxed"
+            className="text-gray-400 max-w-xl text-base md:text-lg leading-relaxed font-normal"
           >
-            AI Developer & Full-Stack Developer specializing in building high-performance,
-            visually stunning web experiences, automation tooling, and artificial intelligence integrations.
+            Passionate Software Developer with hands-on experience in building frontend and backend web applications using Python, ASP.NET, JavaScript, and SQL databases.
           </motion.p>
 
           {/* Call to Actions */}
@@ -116,20 +124,20 @@ export const Hero: React.FC = () => {
             className="flex flex-wrap gap-4 pt-4"
           >
             <MagneticButton
-              onClick={() => window.open('https://res.cloudinary.com/demo/image/upload/sample.pdf', '_blank')}
-              className="px-6 py-3 bg-accent-blue text-white rounded-lg-12 font-medium hover:bg-accent-blue-light shadow-glow-blue hover:shadow-lg transition-all"
+              onClick={handleResumeClick}
+              className="px-6 py-3 bg-accent-blue text-white rounded-xl-16 font-semibold hover:bg-accent-blue-light shadow-glow-blue hover:shadow-lg transition-all"
             >
               <span onMouseEnter={() => setCursorHovered(true)} onMouseLeave={() => setCursorHovered(false)}>
-                Download Resume
+                View Resume
               </span>
             </MagneticButton>
 
             <MagneticButton
               onClick={handleContactClick}
-              className="px-6 py-3 border border-glass-border hover:border-white/20 text-white rounded-lg-12 font-medium hover:bg-glass-bg transition-colors"
+              className="px-6 py-3 border border-glass-border hover:border-white/20 text-white rounded-xl-16 font-semibold hover:bg-glass-bg transition-colors"
             >
               <span onMouseEnter={() => setCursorHovered(true)} onMouseLeave={() => setCursorHovered(false)}>
-                Contact Me
+                Get in Touch
               </span>
             </MagneticButton>
           </motion.div>
@@ -142,7 +150,7 @@ export const Hero: React.FC = () => {
             className="flex items-center space-x-4 pt-6"
           >
             <MagneticButton
-              onClick={() => window.open('https://github.com/AaryanMangukiya', '_blank')}
+              onClick={() => window.open(RESUME_DATA.personalInfo.githubUrl, '_blank')}
               className="p-3 bg-glass-bg border border-glass-border text-gray-400 hover:text-white rounded-full transition-colors"
             >
               <span onMouseEnter={() => setCursorHovered(true)} onMouseLeave={() => setCursorHovered(false)}>
@@ -151,7 +159,7 @@ export const Hero: React.FC = () => {
             </MagneticButton>
 
             <MagneticButton
-              onClick={() => window.open('https://linkedin.com/in/aaryanmangukiya', '_blank')}
+              onClick={() => window.open(RESUME_DATA.personalInfo.linkedinUrl, '_blank')}
               className="p-3 bg-glass-bg border border-glass-border text-gray-400 hover:text-white rounded-full transition-colors"
             >
               <span onMouseEnter={() => setCursorHovered(true)} onMouseLeave={() => setCursorHovered(false)}>
@@ -160,16 +168,7 @@ export const Hero: React.FC = () => {
             </MagneticButton>
 
             <MagneticButton
-              onClick={() => window.open('https://leetcode.com/u/AaryanMangukiya/', '_blank')}
-              className="p-3 bg-glass-bg border border-glass-border text-gray-400 hover:text-white rounded-full transition-colors"
-            >
-              <span onMouseEnter={() => setCursorHovered(true)} onMouseLeave={() => setCursorHovered(false)}>
-                <SiLeetcode size={18} />
-              </span>
-            </MagneticButton>
-
-            <MagneticButton
-              onClick={() => window.open('mailto:aaryanmangukiya.dev@gmail.com', '_blank')}
+              onClick={() => window.open(`mailto:${RESUME_DATA.personalInfo.email}`, '_blank')}
               className="p-3 bg-glass-bg border border-glass-border text-gray-400 hover:text-white rounded-full transition-colors"
             >
               <span onMouseEnter={() => setCursorHovered(true)} onMouseLeave={() => setCursorHovered(false)}>
@@ -179,20 +178,31 @@ export const Hero: React.FC = () => {
           </motion.div>
         </div>
 
-        {/* Profile Image Area */}
+        {/* Profile Image Area - Asymmetric Glowing Initial Block */}
         <div className="lg:col-span-5 flex justify-center order-1 lg:order-2">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, type: 'spring', stiffness: 100 }}
-            className="relative w-64 h-64 md:w-80 md:h-80 rounded-full flex items-center justify-center bg-gradient-to-r from-accent-blue via-accent-purple to-accent-cyan p-[2px] animate-float shadow-glow-blue"
-            style={{ animationDuration: '8s' }}
+            className="relative w-64 h-64 md:w-80 md:h-80 rounded-3xl flex items-center justify-center bg-gradient-to-tr from-accent-blue via-accent-purple to-accent-cyan p-[2px] shadow-glow-blue overflow-visible"
           >
-            <div className="w-full h-full rounded-full bg-background-base overflow-hidden flex items-center justify-center">
-              <span className="text-gray-600 font-mono text-sm">[ Profile Image Placeholder ]</span>
+            <div className="w-full h-full rounded-[22px] bg-background-base overflow-hidden flex flex-col items-center justify-center relative">
+              {/* Abstract Tech Grid Pattern */}
+              <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:14px_24px]" />
+              
+              {/* Centered Glowing Initials */}
+              <div className="relative z-10 flex flex-col items-center">
+                <span className="text-7xl md:text-8xl font-black tracking-widest bg-clip-text text-transparent bg-gradient-to-tr from-accent-blue via-accent-purple to-accent-cyan">
+                  AM
+                </span>
+                <span className="text-xs font-mono text-gray-500 mt-2 uppercase tracking-widest">
+                  Software Engineer
+                </span>
+              </div>
             </div>
-            <div className="absolute inset-0 rounded-full border border-dashed border-accent-blue/30 animate-spin" style={{ animationDuration: '40s' }} />
-            <div className="absolute -inset-4 rounded-full border border-dotted border-accent-purple/20 animate-spin" style={{ animationDuration: '60s', animationDirection: 'reverse' }} />
+            {/* Spinning decorative borders */}
+            <div className="absolute -inset-4 rounded-3xl border border-dashed border-accent-blue/30 animate-spin" style={{ animationDuration: '60s' }} />
+            <div className="absolute -inset-8 rounded-3xl border border-dotted border-accent-purple/20 animate-spin" style={{ animationDuration: '80s', animationDirection: 'reverse' }} />
           </motion.div>
         </div>
       </div>
@@ -203,3 +213,4 @@ export const Hero: React.FC = () => {
     </section>
   );
 };
+export default Hero;
