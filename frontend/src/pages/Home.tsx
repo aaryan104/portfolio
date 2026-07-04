@@ -14,7 +14,6 @@ import { Projects } from '../sections/Projects';
 import { Experience } from '../sections/Experience';
 import { Certifications } from '../sections/Certifications';
 import { Resume } from '../sections/Resume';
-import { GitHubStats } from '../sections/GitHubStats';
 import { Contact } from '../sections/Contact';
 import { RESUME_DATA } from '../content/resume-data';
 
@@ -95,7 +94,6 @@ export const Home: React.FC = () => {
             {RESUME_DATA.experience.length > 0 && <Experience />}
             {RESUME_DATA.certifications.length > 0 && <Certifications />}
             <Resume />
-            <GitHubStats />
             <Contact />
           </main>
 

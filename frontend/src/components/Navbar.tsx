@@ -13,7 +13,7 @@ const NAV_ITEMS = [
   { label: 'Projects', id: 'projects', show: RESUME_DATA.projects.length > 0 },
   { label: 'Experience', id: 'experience', show: RESUME_DATA.experience.length > 0 },
   { label: 'Certifications', id: 'certifications', show: RESUME_DATA.certifications.length > 0 },
-  { label: 'Resume', id: 'resume', show: true },
+  // { label: 'Resume', id: 'resume', show: true },
   { label: 'Contact', id: 'contact', show: true },
 ].filter(item => item.show);
 

@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
             onMouseLeave={() => setCursorHovered(false)}
             className="text-lg font-display font-extrabold tracking-wider text-white"
           >
-            AARYAN<span className="text-accent-blue font-body font-light">.DEV</span>
+            <span className="text-accent-blue font-body font-light">Aaryan Mangukiya</span>
           </Link>
           <p className="text-sm text-gray-500 mt-2">
             Built with ❤️ using React, Tailwind & FastAPI.
@@ -27,7 +27,7 @@ export const Footer: React.FC = () => {
 
         <div className="flex items-center space-x-4">
           <MagneticButton
-            onClick={() => window.open('https://github.com/AaryanMangukiya', '_blank')}
+            onClick={() => window.open('https://github.com/aaryan104', '_blank')}
             className="p-3 bg-glass-bg border border-glass-border text-gray-400 hover:text-white hover:bg-glass-bgHover rounded-full transition-colors"
           >
             <span onMouseEnter={() => setCursorHovered(true)} onMouseLeave={() => setCursorHovered(false)}>
@@ -36,7 +36,7 @@ export const Footer: React.FC = () => {
           </MagneticButton>
 
           <MagneticButton
-            onClick={() => window.open('https://linkedin.com/in/aaryanmangukiya', '_blank')}
+            onClick={() => window.open('https://linkedin.com/in/aaryan-mangukiya-367210370/', '_blank')}
             className="p-3 bg-glass-bg border border-glass-border text-gray-400 hover:text-white hover:bg-glass-bgHover rounded-full transition-colors"
           >
             <span onMouseEnter={() => setCursorHovered(true)} onMouseLeave={() => setCursorHovered(false)}>
@@ -45,7 +45,7 @@ export const Footer: React.FC = () => {
           </MagneticButton>
 
           <MagneticButton
-            onClick={() => window.open('mailto:aaryanmangukiya.dev@gmail.com', '_blank')}
+            onClick={() => window.open('mailto:aaryanmangukiya@gmail.com', '_blank')}
             className="p-3 bg-glass-bg border border-glass-border text-gray-400 hover:text-white hover:bg-glass-bgHover rounded-full transition-colors"
           >
             <span onMouseEnter={() => setCursorHovered(true)} onMouseLeave={() => setCursorHovered(false)}>

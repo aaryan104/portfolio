@@ -89,7 +89,7 @@ export const Contact: React.FC = () => {
         <div className="lg:col-span-5 flex flex-col justify-between gap-6">
           <GlassCard className="p-6 space-y-6 text-left" hoverEffect={false}>
             <h3 className="text-xl font-bold text-white">Contact Info</h3>
-            
+
             <div className="space-y-4">
               <div className="flex items-center space-x-3 text-gray-400">
                 <Mail size={18} className="text-accent-blue shrink-0" />
@@ -110,7 +110,7 @@ export const Contact: React.FC = () => {
             {/* Micro Social icons tray */}
             <div className="flex items-center space-x-4 pt-4 border-t border-glass-border">
               <MagneticButton
-                onClick={() => window.open(`https://wa.me/919714112411`, '_blank')}
+                onClick={() => window.open(`https://wa.me/919714112411`, 'Hello Aaryan Mangukiya,\n I saw your profile. I would like to discuss about ')}
                 className="p-3 bg-glass-bg border border-glass-border text-gray-400 hover:text-green-400 rounded-full transition-colors"
               >
                 <span onMouseEnter={() => setCursorHovered(true)} onMouseLeave={() => setCursorHovered(false)}>
@@ -154,12 +154,12 @@ export const Contact: React.FC = () => {
           <GlassCard className="p-8 h-full flex flex-col justify-between text-left border border-glass-border bg-glass-bg/10" hoverEffect={false}>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-5 w-full">
               {/* Bot Honeypot field (hidden) */}
-              <input 
-                type="text" 
-                {...register('honeypot')} 
-                className="hidden" 
-                tabIndex={-1} 
-                autoComplete="off" 
+              <input
+                type="text"
+                {...register('honeypot')}
+                className="hidden"
+                tabIndex={-1}
+                autoComplete="off"
               />
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

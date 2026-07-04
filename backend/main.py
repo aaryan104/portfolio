@@ -6,7 +6,7 @@ from cache import redis_cache
 from limiter import limiter
 from slowapi.errors import RateLimitExceeded
 from slowapi import _rate_limit_exceeded_handler
-from routers import contact, resume, stats
+from routers import contact, resume
 import uvicorn
 import logging
 
@@ -16,7 +16,7 @@ logger = logging.getLogger("portfolio_main")
 
 app = FastAPI(
     title="Aaryan Mangukiya Portfolio API",
-    description="FastAPI Backend for Contact submissions, resume downloads and coding statistics cache proxies.",
+    description="FastAPI Backend for Contact submissions and resume downloads.",
     version="1.0.0"
 )
 
@@ -52,7 +52,6 @@ async def startup_event():
 # Mount API Routers
 app.include_router(contact.router)
 app.include_router(resume.router)
-app.include_router(stats.router)
 
 @app.get("/health")
 async def health_check():
