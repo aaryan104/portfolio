@@ -25,7 +25,7 @@ export const Projects: React.FC = () => {
         {RESUME_DATA.projects.map((project, index) => {
           const isEven = index % 2 === 0;
           return (
-            <div 
+            <div
               key={index}
               className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12 text-left`}
             >
@@ -39,7 +39,7 @@ export const Projects: React.FC = () => {
               >
                 {/* Abstract Coding Background Grid */}
                 <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:24px_24px]" />
-                
+
                 {/* Visual Art Box */}
                 <div className="flex flex-col items-center space-y-4 p-8 text-center relative z-10">
                   <div className="p-4 bg-background-base/80 border border-glass-border rounded-full text-accent-cyan shadow-glow-blue animate-pulse">

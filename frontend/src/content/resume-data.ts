@@ -161,14 +161,25 @@ export const RESUME_DATA: ResumeData = {
   ],
   projects: [
     {
-      title: "Online Food Ordering System",
-      subtitle: "ASP.NET Web Forms, C#, SQL Server, Tailwind CSS",
+      title: "PlacementAI ⭐ (Flagship Project)",
+      subtitle: "React.js, Node.js, Express.js, MongoDB, JWT, Tailwind CSS, AI APIs",
       githubUrl: "https://github.com/aaryan104",
       bullets: [
-        "Developed a full-stack food ordering web application with role-based access for Admin, Customers, and Delivery Agents.",
-        "Implemented food item management, order placement, delivery tracking, and order status update functionalities.",
-        "Designed a responsive and modern user interface using Tailwind CSS and integrated secure SQL Server database operations.",
-        "Built REST API-based modules and optimized backend workflows for efficient order processing."
+        "MSc IT Final Year Project: AI-powered placement preparation platform designed to help students prepare for campus placements.",
+        "Designed a centralized solution offering personalized learning roadmaps, AI resume analysis, an AI interview simulator, and aptitude/technical MCQs.",
+        "Integrated secure JWT authentication and authorization alongside REST APIs for seamless frontend-backend connection.",
+        "Role: Full Stack Developer & UI/UX Designer, tackling challenges in database design, AI integration, and scalable architecture."
+      ]
+    },
+    {
+      title: "RoadRESQ – Emergency Roadside Assistance Platform",
+      subtitle: "IDE Bootcamp Project | Flutter & Dart Based Real-Time Assistance Application",
+      githubUrl: "https://github.com/aaryan104",
+      bullets: [
+        "Developed a cross-platform roadside assistance application connecting stranded vehicle owners with nearby mechanics in real time using Flutter and Dart.",
+        "Designed separate role-based workflows for customers and mechanics, including emergency request handling, job acceptance, live tracking, and earnings dashboard.",
+        "Implemented modular Flutter architecture with reusable widgets, declarative routing using go_router, and responsive mobile UI design.",
+        "Presented the project at the IDE Bootcamp as a real-world solution for emergency roadside support and local mechanic connectivity."
       ]
     },
     {
@@ -183,6 +194,17 @@ export const RESUME_DATA: ResumeData = {
       ]
     },
     {
+      title: "Online Food Ordering System",
+      subtitle: "ASP.NET Web Forms, C#, SQL Server, Tailwind CSS",
+      githubUrl: "https://github.com/aaryan104",
+      bullets: [
+        "Developed a full-stack food ordering web application with role-based access for Admin, Customers, and Delivery Agents.",
+        "Implemented food item management, order placement, delivery tracking, and order status update functionalities.",
+        "Designed a responsive and modern user interface using Tailwind CSS and integrated secure SQL Server database operations.",
+        "Built REST API-based modules and optimized backend workflows for efficient order processing."
+      ]
+    },
+    {
       title: "Cloud-Based Image Processing System",
       subtitle: "ReactJS, JavaScript, Cloudinary, HTML, CSS",
       githubUrl: "https://github.com/aaryan104",
@@ -194,17 +216,24 @@ export const RESUME_DATA: ResumeData = {
       ]
     },
     {
-      title: "RoadRESQ – Emergency Roadside Assistance Platform",
-      subtitle: "IDE Bootcamp Project | Flutter & Dart Based Real-Time Assistance Application",
+      title: "Ladli",
+      subtitle: "React, Node.js, Express.js, MongoDB, JWT, Tailwind CSS",
       githubUrl: "https://github.com/aaryan104",
       bullets: [
-        "Developed a cross-platform roadside assistance application connecting stranded vehicle owners with nearby mechanics in real time using Flutter and Dart.",
-        "Designed separate role-based workflows for customers and mechanics, including emergency request handling, job acceptance, live tracking, and earnings dashboard.",
-        "Implemented modular Flutter architecture with reusable widgets, declarative routing using go_router, and responsive mobile UI design.",
-        "Built interactive features such as service history tracking, mechanic performance dashboard, customer feedback system, and profile management.",
-        "Enhanced user experience with smooth animations, shimmer loading effects, and optimized mobile-first UI components.",
-        "Structured the application using scalable folder organization and maintainable code practices suitable for production-level development.",
-        "Presented the project at the IDE Bootcamp as a real-world solution for emergency roadside support and local mechanic connectivity."
+        "Women's Fashion E-Commerce Platform: Offers an elegant shopping experience featuring product discovery, search & filters, and checkout flow.",
+        "Built product catalog, cart, wishlist, coupon system, order tracking, and admin dashboards for inventory management.",
+        "Integrated secure JWT authentication and OTP verification pathways.",
+        "Role: Full Stack Developer, handling challenges in payment flow integration and secure customer verification."
+      ]
+    },
+    {
+      title: "CricketInfo",
+      subtitle: "ASP.NET Core, C#, SQL Server, Bootstrap",
+      githubUrl: "https://github.com/aaryan104",
+      bullets: [
+        "Cricket Tournament Management System: Centralizes tournament fixtures, player profiles, schedules, scoreboards, and statistics.",
+        "Automated points table calculations, match fixtures generation, live score entry, and statistical report logging.",
+        "Role: Backend Developer, designing robust database tables and fixture generation algorithms."
       ]
     }
   ]
