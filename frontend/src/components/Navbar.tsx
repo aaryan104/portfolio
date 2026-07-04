@@ -4,16 +4,18 @@ import { useStore } from '../store/useStore';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import { MagneticButton } from './MagneticButton';
 import { motion, AnimatePresence } from 'framer-motion';
+import { RESUME_DATA } from '../content/resume-data';
 
 const NAV_ITEMS = [
-  { label: 'Home', id: 'hero' },
-  { label: 'About', id: 'about' },
-  { label: 'Skills', id: 'skills' },
-  { label: 'Projects', id: 'projects' },
-  { label: 'Experience', id: 'experience' },
-  { label: 'Services', id: 'services' },
-  { label: 'Contact', id: 'contact' },
-];
+  { label: 'Home', id: 'hero', show: true },
+  { label: 'About', id: 'about', show: !!RESUME_DATA.personalInfo.profile },
+  { label: 'Skills', id: 'skills', show: Object.values(RESUME_DATA.skills).some(arr => arr.length > 0) },
+  { label: 'Projects', id: 'projects', show: RESUME_DATA.projects.length > 0 },
+  { label: 'Experience', id: 'experience', show: RESUME_DATA.experience.length > 0 },
+  { label: 'Certifications', id: 'certifications', show: RESUME_DATA.certifications.length > 0 },
+  { label: 'Resume', id: 'resume', show: true },
+  { label: 'Contact', id: 'contact', show: true },
+].filter(item => item.show);
 
 export const Navbar: React.FC = () => {
   const { theme, toggleTheme, activeSection, mobileNavOpen, setMobileNavOpen } = useStore();

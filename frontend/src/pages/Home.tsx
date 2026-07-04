@@ -12,9 +12,11 @@ import { About } from '../sections/About';
 import { Skills } from '../sections/Skills';
 import { Projects } from '../sections/Projects';
 import { Experience } from '../sections/Experience';
-import { Services } from '../sections/Services';
+import { Certifications } from '../sections/Certifications';
+import { Resume } from '../sections/Resume';
 import { GitHubStats } from '../sections/GitHubStats';
 import { Contact } from '../sections/Contact';
+import { RESUME_DATA } from '../content/resume-data';
 
 export const Home: React.FC = () => {
   const [loaded, setLoaded] = useState(false);
@@ -36,7 +38,16 @@ export const Home: React.FC = () => {
   useEffect(() => {
     if (!loaded) return;
     
-    const sections = ['hero', 'about', 'skills', 'projects', 'experience', 'services', 'contact'];
+    const sections = [
+      'hero',
+      RESUME_DATA.personalInfo.profile && 'about',
+      Object.values(RESUME_DATA.skills).some(arr => arr.length > 0) && 'skills',
+      RESUME_DATA.projects.length > 0 && 'projects',
+      RESUME_DATA.experience.length > 0 && 'experience',
+      RESUME_DATA.certifications.length > 0 && 'certifications',
+      'resume',
+      'contact'
+    ].filter(Boolean) as string[];
     
     const observerOptions = {
       root: null,
@@ -78,11 +89,12 @@ export const Home: React.FC = () => {
           
           <main className="flex-grow">
             <Hero />
-            <About />
-            <Skills />
-            <Projects />
-            <Experience />
-            <Services />
+            {RESUME_DATA.personalInfo.profile && <About />}
+            {Object.values(RESUME_DATA.skills).some(arr => arr.length > 0) && <Skills />}
+            {RESUME_DATA.projects.length > 0 && <Projects />}
+            {RESUME_DATA.experience.length > 0 && <Experience />}
+            {RESUME_DATA.certifications.length > 0 && <Certifications />}
+            <Resume />
             <GitHubStats />
             <Contact />
           </main>
