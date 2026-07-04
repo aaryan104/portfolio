@@ -161,7 +161,8 @@ export const RESUME_DATA: ResumeData = {
   ],
   projects: [
     {
-      title: "PlacementAI ⭐ (Flagship Project)",
+      // title: "PlacementAI (Flagship Project)",
+      title: "PlacementAI (In Progress)",
       subtitle: "React.js, Node.js, Express.js, MongoDB, JWT, Tailwind CSS, AI APIs",
       githubUrl: "https://github.com/aaryan104",
       bullets: [
@@ -174,7 +175,7 @@ export const RESUME_DATA: ResumeData = {
     {
       title: "RoadRESQ – Emergency Roadside Assistance Platform",
       subtitle: "IDE Bootcamp Project | Flutter & Dart Based Real-Time Assistance Application",
-      githubUrl: "https://github.com/aaryan104",
+      githubUrl: "https://github.com/nilkanth-910/RoadRESQ",
       bullets: [
         "Developed a cross-platform roadside assistance application connecting stranded vehicle owners with nearby mechanics in real time using Flutter and Dart.",
         "Designed separate role-based workflows for customers and mechanics, including emergency request handling, job acceptance, live tracking, and earnings dashboard.",
@@ -185,7 +186,7 @@ export const RESUME_DATA: ResumeData = {
     {
       title: "GreenCoin – Gamified Tree-Planting & Carbon Credit Tracker",
       subtitle: "PHP, MySQL, JavaScript, Google Maps API",
-      githubUrl: "https://github.com/aaryan104",
+      githubUrl: "https://github.com/aaryan104/GreenCoins",
       bullets: [
         "Developed an environmental web platform to track tree plantations and estimate carbon credit contributions.",
         "Implemented QR-based plantation verification system and interactive map visualization using Google Maps API.",
@@ -196,7 +197,7 @@ export const RESUME_DATA: ResumeData = {
     {
       title: "Online Food Ordering System",
       subtitle: "ASP.NET Web Forms, C#, SQL Server, Tailwind CSS",
-      githubUrl: "https://github.com/aaryan104",
+      githubUrl: "https://github.com/aaryan104/OnlineFoodOrderingSystem",
       bullets: [
         "Developed a full-stack food ordering web application with role-based access for Admin, Customers, and Delivery Agents.",
         "Implemented food item management, order placement, delivery tracking, and order status update functionalities.",
@@ -207,7 +208,7 @@ export const RESUME_DATA: ResumeData = {
     {
       title: "Cloud-Based Image Processing System",
       subtitle: "ReactJS, JavaScript, Cloudinary, HTML, CSS",
-      githubUrl: "https://github.com/aaryan104",
+      githubUrl: "https://github.com/aaryan104/CloudinaryImageUpload",
       bullets: [
         "Developed a cloud-based image processing web application supporting image upload, resizing, cropping, and filter functionalities.",
         "Built responsive user interfaces using ReactJS and JavaScript for real-time image preview and interaction.",
@@ -218,7 +219,7 @@ export const RESUME_DATA: ResumeData = {
     {
       title: "Ladli",
       subtitle: "React, Node.js, Express.js, MongoDB, JWT, Tailwind CSS",
-      githubUrl: "https://github.com/aaryan104",
+      githubUrl: "https://github.com/aaryan104/Ladli-boutique",
       bullets: [
         "Women's Fashion E-Commerce Platform: Offers an elegant shopping experience featuring product discovery, search & filters, and checkout flow.",
         "Built product catalog, cart, wishlist, coupon system, order tracking, and admin dashboards for inventory management.",
@@ -229,7 +230,7 @@ export const RESUME_DATA: ResumeData = {
     {
       title: "CricketInfo",
       subtitle: "ASP.NET Core, C#, SQL Server, Bootstrap",
-      githubUrl: "https://github.com/aaryan104",
+      githubUrl: "https://github.com/aaryan104/scoreCard",
       bullets: [
         "Cricket Tournament Management System: Centralizes tournament fixtures, player profiles, schedules, scoreboards, and statistics.",
         "Automated points table calculations, match fixtures generation, live score entry, and statistical report logging.",
