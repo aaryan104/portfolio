@@ -1,10 +1,8 @@
 from pydantic_settings import BaseSettings
 from typing import List
-import os
 
 class Settings(BaseSettings):
     MONGODB_URI: str = "mongodb://localhost:27017/portfolio"
-    REDIS_URL: str = "redis://localhost:6379/0"
     
     # Email configurations (SMTP fallback or Resend API)
     RESEND_API_KEY: str = ""
@@ -12,7 +10,7 @@ class Settings(BaseSettings):
     SMTP_PORT: int = 587
     SMTP_USERNAME: str = ""
     SMTP_PASSWORD: str = ""
-    NOTIFY_EMAIL: str = "aaryanmangukiya.dev@gmail.com"  # Address that receives contacts
+    NOTIFY_EMAIL: str = "aaryanmangukiya@gmail.com"  # Address that receives contacts
     
     # CORS policy
     ALLOWED_ORIGINS: str = "http://localhost:5173,http://localhost:5174,http://127.0.0.1:5173"
