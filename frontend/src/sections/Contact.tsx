@@ -6,8 +6,9 @@ import { useStore } from '../store/useStore';
 import { GlassCard } from '../components/GlassCard';
 import { GradientText } from '../components/GradientText';
 import { MagneticButton } from '../components/MagneticButton';
-import { Mail, MapPin, Send, AlertCircle, CheckCircle, Linkedin } from 'lucide-react';
+import { Mail, MapPin, Send, AlertCircle, CheckCircle, Linkedin, Phone } from 'lucide-react';
 import { SiWhatsapp, SiGithub } from 'react-icons/si';
+import { RESUME_DATA } from '../content/resume-data';
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -32,9 +33,8 @@ export const Contact: React.FC = () => {
   });
 
   const onSubmit = async (data: ContactFormValues) => {
-    // Honeypot spam bot check
     if (data.honeypot) {
-      setStatus('success'); // Pretend success to bot
+      setStatus('success'); // honeypot decoy
       reset();
       return;
     }
@@ -76,7 +76,7 @@ export const Contact: React.FC = () => {
   return (
     <section id="contact" className="relative py-24 px-6 max-w-7xl mx-auto z-10">
       <div className="space-y-4 text-center md:text-left mb-16">
-        <span className="text-accent-blue font-mono tracking-wider font-semibold uppercase text-sm block">
+        <span className="text-accent-blue font-mono tracking-wider font-semibold uppercase text-xs block">
           Get in touch
         </span>
         <h2 className="text-4xl md:text-5xl font-extrabold text-white">
@@ -93,20 +93,24 @@ export const Contact: React.FC = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-3 text-gray-400">
                 <Mail size={18} className="text-accent-blue shrink-0" />
-                <a href="mailto:aaryanmangukiya.dev@gmail.com" className="text-sm hover:text-white transition-colors select-all">
-                  aaryanmangukiya.dev@gmail.com
+                <a href={`mailto:${RESUME_DATA.personalInfo.email}`} className="text-sm hover:text-white transition-colors select-all">
+                  {RESUME_DATA.personalInfo.email}
                 </a>
               </div>
               <div className="flex items-center space-x-3 text-gray-400">
+                <Phone size={18} className="text-accent-blue shrink-0" />
+                <span className="text-sm">{RESUME_DATA.personalInfo.phone}</span>
+              </div>
+              <div className="flex items-center space-x-3 text-gray-400">
                 <MapPin size={18} className="text-accent-purple shrink-0" />
-                <span className="text-sm">Surat, Gujarat, India (Approximate)</span>
+                <span className="text-sm">Gujarat, India</span>
               </div>
             </div>
 
             {/* Micro Social icons tray */}
             <div className="flex items-center space-x-4 pt-4 border-t border-glass-border">
               <MagneticButton
-                onClick={() => window.open('https://wa.me/910000000000', '_blank')} // TODO: Aaryan to configure exact number
+                onClick={() => window.open(`https://wa.me/919714112411`, '_blank')}
                 className="p-3 bg-glass-bg border border-glass-border text-gray-400 hover:text-green-400 rounded-full transition-colors"
               >
                 <span onMouseEnter={() => setCursorHovered(true)} onMouseLeave={() => setCursorHovered(false)}>
@@ -115,7 +119,7 @@ export const Contact: React.FC = () => {
               </MagneticButton>
 
               <MagneticButton
-                onClick={() => window.open('https://linkedin.com/in/aaryanmangukiya', '_blank')}
+                onClick={() => window.open(RESUME_DATA.personalInfo.linkedinUrl, '_blank')}
                 className="p-3 bg-glass-bg border border-glass-border text-gray-400 hover:text-blue-400 rounded-full transition-colors"
               >
                 <span onMouseEnter={() => setCursorHovered(true)} onMouseLeave={() => setCursorHovered(false)} className="flex items-center justify-center">
@@ -124,7 +128,7 @@ export const Contact: React.FC = () => {
               </MagneticButton>
 
               <MagneticButton
-                onClick={() => window.open('https://github.com/AaryanMangukiya', '_blank')}
+                onClick={() => window.open(RESUME_DATA.personalInfo.githubUrl, '_blank')}
                 className="p-3 bg-glass-bg border border-glass-border text-gray-400 hover:text-white rounded-full transition-colors"
               >
                 <span onMouseEnter={() => setCursorHovered(true)} onMouseLeave={() => setCursorHovered(false)}>
@@ -134,7 +138,7 @@ export const Contact: React.FC = () => {
             </div>
           </GlassCard>
 
-          {/* Approx Google Map Embed for Privacy */}
+          {/* Location Map Embed */}
           <div className="rounded-xl-16 overflow-hidden border border-glass-border h-64 md:h-72 w-full bg-background-elevated relative">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119066.52982230402!2d72.73111005820311!3d21.170240100000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e59411d1563%3A0xfe4558290938b042!2sSurat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
@@ -245,3 +249,4 @@ export const Contact: React.FC = () => {
     </section>
   );
 };
+export default Contact;
