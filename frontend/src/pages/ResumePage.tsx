@@ -5,9 +5,9 @@ import { ArrowLeft, Download, FileText } from 'lucide-react';
 import { MagneticButton } from '../components/MagneticButton';
 import { GradientText } from '../components/GradientText';
 import { motion } from 'framer-motion';
+import { RESUME_DATA } from '../content/resume-data';
 
-// TODO: Aaryan to confirm exact Cloudinary URL for his resume PDF
-const RESUME_PDF_URL = 'https://res.cloudinary.com/demo/image/upload/sample.pdf';
+const RESUME_PDF_URL = RESUME_DATA.personalInfo.resumePdfUrl;
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
 
 export const ResumePage: React.FC = () => {
