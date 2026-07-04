@@ -50,12 +50,13 @@ export const Resume: React.FC = () => {
         </MagneticButton>
       </div>
 
+      {/* Desktop PDF Viewer */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.5 }}
-        className="rounded-2xl overflow-hidden border border-glass-border shadow-soft bg-glass-bg/10 h-[600px] flex flex-col"
+        className="hidden md:flex rounded-2xl overflow-hidden border border-glass-border shadow-soft bg-glass-bg/10 h-[600px] flex-col"
       >
         <iframe
           src={`${RESUME_PDF_URL}#toolbar=0`}
@@ -63,6 +64,25 @@ export const Resume: React.FC = () => {
           className="w-full flex-grow border-none"
           loading="lazy"
         />
+      </motion.div>
+
+      {/* Mobile PDF Fallback Card */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        className="md:hidden p-6 rounded-2xl border border-glass-border bg-glass-bg/10 text-center space-y-4"
+      >
+        <div className="text-gray-400 text-sm leading-relaxed">
+          PDF previews may not render correctly on mobile browsers. Please download the document to view it comfortably.
+        </div>
+        <button
+          onClick={handleDownload}
+          className="w-full py-3 bg-accent-blue text-white rounded-xl font-semibold hover:bg-accent-blue-light transition-all flex items-center justify-center space-x-2 shadow-glow-blue cursor-pointer"
+        >
+          <Download size={16} />
+          <span>Download PDF Resume</span>
+        </button>
       </motion.div>
     </section>
   );

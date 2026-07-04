@@ -72,7 +72,7 @@ const SpotlightCard: React.FC<{
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsFocused(true)}
       onMouseLeave={() => setIsFocused(false)}
-      className={`relative overflow-hidden rounded-2xl border border-glass-border bg-glass-bg/10 w-full h-32 flex items-center justify-center p-6 transition-all duration-300 hover:border-white/10 ${className}`}
+      className={`relative overflow-hidden rounded-2xl border border-glass-border bg-glass-bg/10 w-full min-h-[7.5rem] md:min-h-[8.5rem] h-auto flex items-center justify-center py-4 px-3 md:p-6 transition-all duration-300 hover:border-white/10 ${className}`}
       style={{
         // Store accent color as CSS custom property
         ['--accent-color' as any]: accentColor

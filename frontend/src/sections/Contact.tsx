@@ -151,7 +151,7 @@ export const Contact: React.FC = () => {
 
         {/* Right Column: Reactive Zod form validation panel */}
         <div className="lg:col-span-7">
-          <GlassCard className="p-8 h-full flex flex-col justify-between text-left border border-glass-border bg-glass-bg/10" hoverEffect={false}>
+          <GlassCard className="p-5 md:p-8 h-full flex flex-col justify-between text-left border border-glass-border bg-glass-bg/10" hoverEffect={false}>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-5 w-full">
               {/* Bot Honeypot field (hidden) */}
               <input

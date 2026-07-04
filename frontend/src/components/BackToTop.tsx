@@ -10,7 +10,8 @@ export const BackToTop: React.FC = () => {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      setVisible(window.scrollY > 600);
+      // Show BackToTop button when scrolled down past 400px
+      setVisible(window.scrollY >= 400);
     };
 
     window.addEventListener('scroll', toggleVisibility);
@@ -32,14 +33,14 @@ export const BackToTop: React.FC = () => {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.5 }}
           transition={{ duration: 0.2 }}
-          className="fixed bottom-24 right-6 z-40"
+          className="fixed bottom-8 right-6 z-40"
         >
           <MagneticButton
             onClick={scrollToTop}
-            className="p-3 bg-accent-blue text-white rounded-full border border-accent-blue-light/20 shadow-glow-blue hover:bg-accent-blue-light hover:shadow-lg transition-all"
+            className="p-4 bg-accent-blue text-white rounded-full border border-accent-blue-light/20 shadow-glow-blue hover:bg-accent-blue-light hover:shadow-lg transition-all"
           >
-            <span onMouseEnter={() => setCursorHovered(true)} onMouseLeave={() => setCursorHovered(false)}>
-              <ArrowUp size={20} />
+            <span onMouseEnter={() => setCursorHovered(true)} onMouseLeave={() => setCursorHovered(false)} className="flex items-center justify-center">
+              <ArrowUp size={22} />
             </span>
           </MagneticButton>
         </motion.div>
@@ -47,3 +48,4 @@ export const BackToTop: React.FC = () => {
     </AnimatePresence>
   );
 };
+export default BackToTop;

@@ -29,7 +29,7 @@ export const Experience: React.FC = () => {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <GlassCard className="p-8 md:p-10 border border-glass-border bg-glass-bg/10 hover:border-accent-purple/30 transition-all space-y-6">
+            <GlassCard className="p-5 md:p-8 lg:p-10 border border-glass-border bg-glass-bg/10 hover:border-accent-purple/30 transition-all space-y-6">
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-glass-border pb-6">
                 <div className="flex items-center space-x-4">
                   <div className="p-3 bg-glass-bg border border-glass-border rounded-2xl text-accent-purple shadow-glow-purple">
@@ -52,7 +52,7 @@ export const Experience: React.FC = () => {
               </div>
 
               {/* Work Details List */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 pt-2">
                 {exp.bullets.map((bullet, bIdx) => (
                   <div key={bIdx} className="flex items-start space-x-3 text-sm text-gray-300 leading-relaxed">
                     <CheckCircle2 size={16} className="text-accent-purple shrink-0 mt-0.5" />

@@ -13,11 +13,11 @@ export const Hero: React.FC = () => {
   const [typedText, setTypedText] = useState('');
   const [titleIdx, setTitleIdx] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  
+
   useEffect(() => {
     let timer: any;
     const currentFullText = TITLES[titleIdx];
-    
+
     if (isDeleting) {
       timer = setTimeout(() => {
         setTypedText(prev => prev.slice(0, -1));
@@ -84,9 +84,9 @@ export const Hero: React.FC = () => {
             className="space-y-2"
           >
             <span className="text-accent-cyan font-mono tracking-wider font-semibold uppercase text-xs block">
-              AVAILABLE FOR INTERNSHIPS
+              AVAILABLE FOR FULL-TIME ROLES
             </span>
-            <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-white leading-tight">
               Hi, I'm <br />
               <GradientText from="from-accent-blue" to="to-accent-purple">
                 {RESUME_DATA.personalInfo.name}
@@ -99,7 +99,7 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="h-8 md:h-10 text-xl md:text-3xl font-medium text-gray-300"
+            className="min-h-[2.5rem] sm:min-h-[3rem] text-xl sm:text-2xl md:text-3xl font-medium text-gray-300"
           >
             <span>A </span>
             <span className="text-white border-r-2 border-accent-cyan pr-1 animate-pulse">
@@ -189,7 +189,7 @@ export const Hero: React.FC = () => {
             <div className="w-full h-full rounded-[22px] bg-background-base overflow-hidden flex flex-col items-center justify-center relative">
               {/* Abstract Tech Grid Pattern */}
               <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:14px_24px]" />
-              
+
               {/* Centered Glowing Initials */}
               <div className="relative z-10 flex flex-col items-center">
                 <span className="text-7xl md:text-8xl font-black tracking-widest bg-clip-text text-transparent bg-gradient-to-tr from-accent-blue via-accent-purple to-accent-cyan">

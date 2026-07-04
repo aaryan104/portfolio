@@ -54,11 +54,10 @@ export const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-background-base/80 backdrop-blur-md border-b border-glass-border py-4'
-          : 'bg-transparent py-6'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+        ? 'bg-background-base/80 backdrop-blur-md border-b border-glass-border py-4'
+        : 'bg-transparent py-6'
+        }`}
     >
       {/* Scroll Progress Bar */}
       <div
@@ -69,7 +68,7 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="text-xl font-display font-extrabold tracking-wider text-white">
-          AARYAN<span className="text-accent-blue font-body font-light">.DEV</span>
+          A<span className="text-accent-blue font-body font-semibold">M</span>
         </Link>
 
         {/* Desktop Navigation */}

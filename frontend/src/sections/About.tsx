@@ -40,7 +40,7 @@ export const About: React.FC = () => {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
           >
-            <GlassCard className="p-8 space-y-6 border border-glass-border bg-glass-bg/10 hover:border-accent-purple/20 transition-all">
+            <GlassCard className="p-5 sm:p-8 space-y-6 border border-glass-border bg-glass-bg/10 hover:border-accent-purple/20 transition-all">
               <h3 className="text-2xl font-extrabold text-white tracking-tight">
                 My Story & Professional Profile
               </h3>
@@ -73,7 +73,7 @@ export const About: React.FC = () => {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <GlassCard className="p-6 space-y-4 border border-glass-border bg-glass-bg/10">
+            <GlassCard className="p-5 sm:p-6 space-y-4 border border-glass-border bg-glass-bg/10">
               <h4 className="text-lg font-bold text-white tracking-tight">Contact Information</h4>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-sm text-gray-400">
@@ -102,7 +102,7 @@ export const About: React.FC = () => {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <GlassCard className="p-6 space-y-4 border border-glass-border bg-glass-bg/10">
+            <GlassCard className="p-5 sm:p-6 space-y-4 border border-glass-border bg-glass-bg/10">
               <h4 className="text-lg font-bold text-white tracking-tight flex items-center space-x-2">
                 <Award size={18} className="text-accent-cyan" />
                 <span>Soft Skills & Competencies</span>
