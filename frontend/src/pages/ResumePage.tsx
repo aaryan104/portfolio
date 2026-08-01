@@ -17,12 +17,12 @@ export const ResumePage: React.FC = () => {
   const handleDownload = () => {
     try {
       // Fire and forget download tracking call
-      fetch(`${API_BASE_URL}/api/resume/download`, { method: 'POST' }).catch(() => {});
-      
+      fetch(`${API_BASE_URL}/api/resume/download`, { method: 'POST' }).catch(() => { });
+
       // Open / trigger standard browser download
       const link = document.createElement('a');
       link.href = RESUME_PDF_URL;
-      link.download = 'Aaryan_Mangukiya_Resume.pdf';
+      link.download = 'Aaryan_Mangukiya_Resume_Updated.pdf';
       link.target = '_blank';
       document.body.appendChild(link);
       link.click();
@@ -35,7 +35,7 @@ export const ResumePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-background-base text-gray-300 pt-28 pb-16 px-6 flex flex-col">
       <div className="max-w-5xl mx-auto w-full space-y-8 flex-grow flex flex-col">
-        
+
         {/* Back navigation */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}

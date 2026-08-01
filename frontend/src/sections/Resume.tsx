@@ -14,10 +14,10 @@ export const Resume: React.FC = () => {
 
   const handleDownload = () => {
     try {
-      fetch(`${API_BASE_URL}/api/resume/download`, { method: 'POST' }).catch(() => {});
+      fetch(`${API_BASE_URL}/api/resume/download`, { method: 'POST' }).catch(() => { });
       const link = document.createElement('a');
       link.href = RESUME_PDF_URL;
-      link.download = 'Aaryan_Mangukiya_Resume.pdf';
+      link.download = 'Aaryan_Mangukiya_Resume_Updated.pdf';
       link.target = '_blank';
       document.body.appendChild(link);
       link.click();

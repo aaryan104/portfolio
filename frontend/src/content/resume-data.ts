@@ -68,7 +68,7 @@ export const RESUME_DATA: ResumeData = {
     linkedin: "aaryan-mangukiya",
     linkedinUrl: "https://www.linkedin.com/in/aaryan-mangukiya-367210370/",
     profile: "Passionate Software Developer with hands-on experience in developing frontend and backend web applications using Python, ASP.NET, JavaScript, and SQL databases. Strong understanding of OOP, REST APIs, Data Structures, and modern web technologies. Skilled in developing scalable applications, working with Git/GitHub, and solving real-world problems through software development projects. Seeking an opportunity to contribute, learn, and grow as a Software Development Engineer Intern.",
-    resumePdfUrl: "/Aaryan_Mangukiya_Resume.pdf"
+    resumePdfUrl: "/Aaryan_Mangukiya_Resume_Updated.pdf"
     //resumePdfUrl: "https://drive.google.com/file/d/1leRv_GTKHTNhndfTI8C-XSGQDZT9D43-/view?usp=sharing"
   },
   skills: {
