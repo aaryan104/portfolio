@@ -54,23 +54,6 @@ export const Certifications: React.FC = () => {
                 </div>
               </div>
 
-              {cert.verifyUrl ? (
-                <a
-                  href={cert.verifyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onMouseEnter={() => setCursorHovered(true)}
-                  onMouseLeave={() => setCursorHovered(false)}
-                  className="flex items-center space-x-1.5 text-xs font-semibold uppercase tracking-wider text-accent-cyan hover:text-white transition-colors mt-3 self-start"
-                >
-                  <span>Verify</span>
-                  <ExternalLink size={12} />
-                </a>
-              ) : (
-                <span className="text-[10px] text-gray-600 font-mono mt-3 block">
-                  Credential Logged
-                </span>
-              )}
             </GlassCard>
           </motion.div>
         ))}
