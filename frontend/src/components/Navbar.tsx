@@ -97,14 +97,8 @@ export const Navbar: React.FC = () => {
           </Link>
         </div>
 
-        {/* Toolbar (Theme & Mobile Menu Toggle) */}
+        {/* Toolbar (Mobile Menu Toggle) */}
         <div className="flex items-center space-x-4">
-          <MagneticButton
-            onClick={toggleTheme}
-            className="p-2 rounded-full border border-glass-border text-gray-400 hover:text-white hover:bg-glass-bg transition-colors"
-          >
-            {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
-          </MagneticButton>
 
           <button
             onClick={() => setMobileNavOpen(!mobileNavOpen)}

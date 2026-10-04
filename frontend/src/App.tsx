@@ -15,11 +15,9 @@ const queryClient = new QueryClient({
 });
 
 function App() {
-  const { theme } = useStore();
-
   return (
     <QueryClientProvider client={queryClient}>
-      <div className={`${theme === 'dark' ? 'dark bg-background-base' : 'bg-gray-100 text-gray-900'} text-gray-300 min-h-screen relative overflow-hidden`}>
+      <div className="dark bg-background-base text-gray-300 min-h-screen relative overflow-hidden">
         <Router>
           <Routes>
             <Route path="/" element={<Home />} />
