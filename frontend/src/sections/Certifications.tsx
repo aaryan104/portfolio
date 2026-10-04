@@ -1,7 +1,7 @@
 import React from 'react';
 import { RESUME_DATA } from '../content/resume-data';
 import { useStore } from '../store/useStore';
-import { Award, ExternalLink } from 'lucide-react';
+import { Award } from 'lucide-react';
 import { GlassCard } from '../components/GlassCard';
 import { GradientText } from '../components/GradientText';
 import { motion } from 'framer-motion';
