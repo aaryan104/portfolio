@@ -21,7 +21,7 @@ export const Footer: React.FC = () => {
             <span className="text-accent-blue font-body font-light">Aaryan Mangukiya</span>
           </Link>
           <p className="text-sm text-gray-500 mt-2">
-            Built with ❤️ using React, Tailwind & FastAPI.
+            Designed and built with passion by Aaryan Mangukiya.
           </p>
         </div>
 
