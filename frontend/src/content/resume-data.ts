@@ -67,43 +67,48 @@ export const RESUME_DATA: ResumeData = {
     githubUrl: "https://github.com/aaryan104",
     linkedin: "aaryan-mangukiya",
     linkedinUrl: "https://www.linkedin.com/in/aaryan-mangukiya-367210370/",
-    profile: "Passionate Software Developer with hands-on experience in developing frontend and backend web applications using Python, ASP.NET, JavaScript, and SQL databases. Strong understanding of OOP, REST APIs, Data Structures, and modern web technologies. Skilled in developing scalable applications, working with Git/GitHub, and solving real-world problems through software development projects. Seeking an opportunity to contribute, learn, and grow as a Software Development Engineer Intern.",
+    profile: "Aspiring Full-Stack Developer with internship experience in ASP.NET, SQL Server, and modern web technologies. Passionate about building scalable web applications and AI-powered solutions, with hands-on experience in REST APIs, database design, and full-stack development.",
     resumePdfUrl: "/Aaryan_Mangukiya_Resume_Updated.pdf"
-    //resumePdfUrl: "https://drive.google.com/file/d/1leRv_GTKHTNhndfTI8C-XSGQDZT9D43-/view?usp=sharing"
   },
   skills: {
-    programmingLanguages: ["Python", "JavaScript", "C#", "C", "C++"],
-    webTechnologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "Tailwind CSS"],
+    programmingLanguages: ["Python", "Java", "C#", "C", "C++", "PHP"],
+    webTechnologies: ["HTML", "JavaScript", "Bootstrap", "Tailwind CSS"],
     frameworksLibraries: ["ASP.NET Core", "ASP.NET MVC", "Web API", "Flask", "ReactJS", "Pandas", "NumPy"],
     tools: ["Git", "GitHub", "Postman"],
     databases: ["SQL Server", "MySQL", "MongoDB", "PostgreSQL"],
-    concepts: ["OOP", "Data Structures & Algorithms", "DBMS", "REST APIs", "CRUD Operations"],
+    concepts: ["OOP", "Data Structures & Algorithms", "DBMS", "REST APIs", "CRUD Operations", "SDLC"],
     languages: ["English", "Gujarati", "Hindi"]
   },
   education: [
     {
-      degree: "B.Sc. Information Technology",
-      duration: "July 2022 - May 2025",
-      institution: "SRKI- Shri RamKrishna Institute, Sarvajanik University",
-      grade: "CGPA – 9.20"
+      degree: "Master of Science - Information Technology",
+      duration: "July 2025 - Pursuing",
+      institution: "Smt. Chandaben Mohanbhai Patel Institute - Charusat University | Changa, Anand, Gujarat",
+      grade: "CGPA: 7.82"
     },
     {
-      degree: "M.Sc. Information Technology",
-      duration: "July 2025 - Pursuing",
-      institution: "CMPICA, Charusat University",
-      grade: "CGPA – 7.92"
+      degree: "Bachelor of Science - Information Technology",
+      duration: "July 2022 - May 2025",
+      institution: "Shree Ramkrishna Institute - Sarvajanik University | Surat, Gujarat",
+      grade: "CGPA: 9.09"
+    },
+    {
+      degree: "Higher Secondary (General Stream)",
+      duration: "June 2020 - April 2022",
+      institution: "Ankur Vidhyabhavan | Surat, Gujarat",
+      grade: "Per: 74.67%"
     }
   ],
   experience: [
     {
-      role: "Intern – Dotnet Developer",
+      role: "Intern - Dotnet Developer",
       organization: "Toshal Infotech Pvt. Ltd.",
       duration: "November 2024 - May 2025",
       bullets: [
-        "Worked on ASP.NET-based web applications and backend development.",
-        "Developed CRUD modules, database integrations, and REST API functionalities.",
-        "Collaborated on real-world project development using SQL Server and Git.",
-        "Improved debugging, problem-solving, and software development workflow skills."
+        "Built a full-stack Online Food Ordering System supporting 3 user roles with 15+ core features, including menu management, order tracking, and delivery management.",
+        "Designed role-based authentication supporting 3 user roles (Admin, Customer, Delivery Agent).",
+        "Implemented 20+ CRUD operations using SQL Server for menu, orders, users, and delivery management.",
+        "Collaborated with a 3-member development team using Git, debugging, and feature implementation."
       ]
     }
   ],
@@ -158,41 +163,49 @@ export const RESUME_DATA: ResumeData = {
       title: "IIT Roorkee – IDE (Innovation, Design & Entrepreneurship) Bootcamp Participation",
       issuer: "IDE Bootcamp",
       date: "April 2026"
+    },
+    {
+      title: "ISRO – Space Science and Technology Awareness Training (START)",
+      issuer: "ISRO",
+      date: "2024"
     }
   ],
   projects: [
     {
-      // title: "PlacementAI (Flagship Project)",
-      title: "PlacementAI (In Progress)",
-      subtitle: "React.js, Node.js, Express.js, MongoDB, JWT, Tailwind CSS, AI APIs",
-      githubUrl: "https://github.com/aaryan104",
+      title: "PlacementAI – AI-Powered Placement Preparation Platform",
+      subtitle: "React, Python, REST API, FastAPI, Tailwind CSS, MongoDB, Git",
+      githubUrl: "https://github.com/happy8924/PlacementAI",
       bullets: [
-        "MSc IT Final Year Project: AI-powered placement preparation platform designed to help students prepare for campus placements.",
-        "Designed a centralized solution offering personalized learning roadmaps, AI resume analysis, an AI interview simulator, and aptitude/technical MCQs.",
-        "Integrated secure JWT authentication and authorization alongside REST APIs for seamless frontend-backend connection.",
-        "Role: Full Stack Developer & UI/UX Designer, tackling challenges in database design, AI integration, and scalable architecture."
+        "Developing an AI-powered placement preparation platform to help students prepare for technical interviews through resume analysis, personalized learning roadmaps, and recruiter-driven practice modules.",
+        "A functional prototype has been completed, with AI integration currently in progress."
       ]
     },
     {
       title: "RoadRESQ – Emergency Roadside Assistance Platform",
-      subtitle: "IDE Bootcamp Project | Flutter & Dart Based Real-Time Assistance Application",
+      subtitle: "Flutter, Dart, Firebase, Go Router, Git",
       githubUrl: "https://github.com/nilkanth-910/RoadRESQ",
       bullets: [
-        "Developed a cross-platform roadside assistance application connecting stranded vehicle owners with nearby mechanics in real time using Flutter and Dart.",
-        "Designed separate role-based workflows for customers and mechanics, including emergency request handling, job acceptance, live tracking, and earnings dashboard.",
-        "Implemented modular Flutter architecture with reusable widgets, declarative routing using go_router, and responsive mobile UI design.",
-        "Presented the project at the IDE Bootcamp as a real-world solution for emergency roadside support and local mechanic connectivity."
+        "Built a cross-platform roadside assistance application connecting stranded vehicle owners with nearby mechanics.",
+        "Implemented role-based workflows for customers and mechanics, emergency request handling, service tracking, and responsive mobile interfaces."
       ]
     },
     {
-      title: "GreenCoin – Gamified Tree-Planting & Carbon Credit Tracker",
-      subtitle: "PHP, MySQL, JavaScript, Google Maps API",
+      title: "GreenCoin – Gamified Tree Plantation & Carbon Credit Tracker",
+      subtitle: "PHP, MySQL, JavaScript, HTML, CSS, Bootstrap, Google Maps API",
       githubUrl: "https://github.com/aaryan104/GreenCoins",
       bullets: [
-        "Developed an environmental web platform to track tree plantations and estimate carbon credit contributions.",
-        "Implemented QR-based plantation verification system and interactive map visualization using Google Maps API.",
-        "Designed leaderboard and reward system using GreenCoins to encourage user participation and engagement.",
-        "Integrated real-time data management and secure backend operations using PHP and MySQL."
+        "Built a web platform that encourages tree plantation through gamification by tracking plantations, estimating carbon credits, QR-based verification, leaderboards, and reward mechanisms.",
+        "Integrated map visualization and secure backend operations for real-time plantation management."
+      ]
+    },
+    {
+      title: "Ladli | Luxury Indian Ethnic Fashion",
+      subtitle: "React, Node.js, Express.js, MongoDB, JWT, Tailwind CSS",
+      githubUrl: "https://github.com/aaryan104/Ladli-boutique",
+      demoUrl: "https://ladli-boutique.vercel.app/",
+      bullets: [
+        "Women's Fashion E-Commerce Platform: Offers an elegant shopping experience featuring product discovery, search & filters, and checkout flow.",
+        "Built product catalog, cart, wishlist, coupon system, order tracking, and admin dashboards for inventory management."
       ]
     },
     {
@@ -202,8 +215,7 @@ export const RESUME_DATA: ResumeData = {
       bullets: [
         "Developed a full-stack food ordering web application with role-based access for Admin, Customers, and Delivery Agents.",
         "Implemented food item management, order placement, delivery tracking, and order status update functionalities.",
-        "Designed a responsive and modern user interface using Tailwind CSS and integrated secure SQL Server database operations.",
-        "Built REST API-based modules and optimized backend workflows for efficient order processing."
+        "Designed a responsive and modern user interface using Tailwind CSS and integrated secure SQL Server database operations."
       ]
     },
     {
@@ -212,20 +224,7 @@ export const RESUME_DATA: ResumeData = {
       githubUrl: "https://github.com/aaryan104/CloudinaryImageUpload",
       bullets: [
         "Developed a cloud-based image processing web application supporting image upload, resizing, cropping, and filter functionalities.",
-        "Built responsive user interfaces using ReactJS and JavaScript for real-time image preview and interaction.",
-        "Integrated Cloudinary services for cloud image storage and image processing operations.",
-        "Improved user experience with dynamic rendering and optimized frontend performance."
-      ]
-    },
-    {
-      title: "Ladli",
-      subtitle: "React, Node.js, Express.js, MongoDB, JWT, Tailwind CSS",
-      githubUrl: "https://github.com/aaryan104/Ladli-boutique",
-      bullets: [
-        "Women's Fashion E-Commerce Platform: Offers an elegant shopping experience featuring product discovery, search & filters, and checkout flow.",
-        "Built product catalog, cart, wishlist, coupon system, order tracking, and admin dashboards for inventory management.",
-        "Integrated secure JWT authentication and OTP verification pathways.",
-        "Role: Full Stack Developer, handling challenges in payment flow integration and secure customer verification."
+        "Built responsive user interfaces using ReactJS and JavaScript for real-time image preview and interaction."
       ]
     },
     {
@@ -234,8 +233,7 @@ export const RESUME_DATA: ResumeData = {
       githubUrl: "https://github.com/aaryan104/scoreCard",
       bullets: [
         "Cricket Tournament Management System: Centralizes tournament fixtures, player profiles, schedules, scoreboards, and statistics.",
-        "Automated points table calculations, match fixtures generation, live score entry, and statistical report logging.",
-        "Role: Backend Developer, designing robust database tables and fixture generation algorithms."
+        "Automated points table calculations, match fixtures generation, live score entry, and statistical report logging."
       ]
     }
   ]
