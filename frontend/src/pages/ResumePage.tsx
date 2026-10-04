@@ -86,7 +86,7 @@ export const ResumePage: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
-          className="hidden md:flex flex-grow rounded-2xl-24 overflow-hidden border border-glass-border shadow-soft bg-background-elevated min-h-[600px] flex-col"
+          className="flex flex-grow rounded-2xl-24 overflow-hidden border border-glass-border shadow-soft bg-background-elevated min-h-[400px] md:min-h-[600px] h-[75vh] max-h-[800px] flex-col"
         >
           <iframe
             src={`${RESUME_PDF_URL}#toolbar=0`}
@@ -94,25 +94,6 @@ export const ResumePage: React.FC = () => {
             className="w-full flex-grow border-none"
             loading="lazy"
           />
-        </motion.div>
-
-        {/* Mobile PDF Fallback Card */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.2 }}
-          className="md:hidden p-6 rounded-2xl border border-glass-border bg-glass-bg/10 text-center space-y-4"
-        >
-          <div className="text-gray-400 text-sm leading-relaxed font-medium">
-            PDF previews are optimized for wider desktop displays. Please click the button below to download and view your resume on mobile.
-          </div>
-          <button
-            onClick={handleDownload}
-            className="w-full py-3 bg-accent-blue text-white rounded-xl font-semibold hover:bg-accent-blue-light transition-all flex items-center justify-center space-x-2 shadow-glow-blue cursor-pointer"
-          >
-            <Download size={16} />
-            <span>Download PDF Resume</span>
-          </button>
         </motion.div>
       </div>
     </div>
