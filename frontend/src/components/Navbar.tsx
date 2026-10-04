@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useStore } from '../store/useStore';
 import { Menu, X } from 'lucide-react';
-import { MagneticButton } from './MagneticButton';
 import { motion, AnimatePresence } from 'framer-motion';
 import { RESUME_DATA } from '../content/resume-data';
 

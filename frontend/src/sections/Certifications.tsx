@@ -1,14 +1,11 @@
 import React from 'react';
 import { RESUME_DATA } from '../content/resume-data';
-import { useStore } from '../store/useStore';
 import { Award } from 'lucide-react';
 import { GlassCard } from '../components/GlassCard';
 import { GradientText } from '../components/GradientText';
 import { motion } from 'framer-motion';
 
 export const Certifications: React.FC = () => {
-  const { setCursorHovered } = useStore();
-
   if (RESUME_DATA.certifications.length === 0) return null;
 
   return (
